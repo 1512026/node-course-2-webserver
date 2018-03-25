@@ -25,7 +25,7 @@ app.use((req,res,next)=>{
 app.get('/',(req,res)=>{
     res.render('home.hbs',{
         title: "Index Page",
-        greeting: "Hello"
+        greeting: "Wellcome"
     })
 })
 
@@ -35,5 +35,10 @@ app.get('/about',(req,res)=>{
     });
 })
 
+app.get('/project',(req,res)=>{
+    res.render('project.hbs',{
+        title:"Project Page",
+    });
+})
 
 app.listen(port,()=>{console.log("server is up port: " + port)});
